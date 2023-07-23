@@ -62,7 +62,7 @@ export default function TopBar({ showNav, setShowNav }) {
                     <a
                       href="/dashboard/profile"
                       className={`${
-                        active ? "bg-[#21a753] text-white" : "text-gray-700"
+                        active ? "bg-[#ff8f00] text-white" : "text-gray-700"
                       } flex hover:pacity-70 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center`}
                     >
                       <UserIcon className="h-4 w-4 mr-2" />
@@ -76,7 +76,7 @@ export default function TopBar({ showNav, setShowNav }) {
                       href="/"
                       onClick={handleLogout}
                       className={`${
-                        active ? "bg-[#21a753] text-white" : "text-gray-700"
+                        active ? "bg-[#ff8f00] text-white" : "text-gray-700"
                       } flex hover:opacity-70 hover:text-white text-gray-700 rounded p-2 text-sm group transition-colors items-center`}
                     >
                       <ArrowLeftOnRectangleIcon className="h-4 w-4 mr-2" />

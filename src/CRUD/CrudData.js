@@ -35,7 +35,7 @@ const CrudData = () => {
 
   return (
     <>
-      <div className="container pt-4 max-w-7xl mx-auto font-poppins">
+      <div className="container pt-6 max-w-7xl mx-auto font-poppins">
         <div className="border p-4 mb-4 bg-white">
         <nav aria-label="breadcrumb">
   <ol className="flex leading-none text-indigo-600 text-sm divide-x divide-[#FF8F00]">
@@ -53,7 +53,7 @@ const CrudData = () => {
           </div>
           <div className="flex justify-end">
             <Link to="/dashboard/list-game/form">
-              <button className="px-4 py-2 mb-4 rounded-md bg-[#ff8f00] text-white hover:bg-orange-400">
+              <button className="px-4 py-2 mb-4 text-sm rounded-lg bg-[#ff8f00] text-white hover:bg-orange-400">
                 Create Game Post
               </button>
             </Link>
@@ -95,7 +95,7 @@ const CrudData = () => {
         </td>
               <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
               <div className="text-sm leading-5 text-gray-900">
-                  <img src={res.image_url} className="w-16 h-16"/>
+                  <img src={res.image_url} className="w-12 h-10 rounded-lg md:w-16 md:h-16"/>
                 </div>
               </td>
               <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">

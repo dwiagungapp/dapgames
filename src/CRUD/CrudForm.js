@@ -75,8 +75,8 @@ const CrudForm = () => {
     <section className="p-4 font-poppins">
     <div className="border p-4 mb-4 bg-white">
     <nav aria-label="breadcrumb">
-  <ol class="flex leading-none text-indigo-600 text-sm divide-x divide-[#FF8F00]">
-    <li class="pr-4">
+  <ol className="flex leading-none text-indigo-600 text-sm divide-x divide-[#FF8F00]">
+    <li className="pr-4">
     <Link reloadDocument
                     to="/dashboard/list-game"
                     className="text-[#FF8F00] hover:text-opacity-70 py-2"
@@ -84,16 +84,16 @@ const CrudForm = () => {
                           List Games
                   </Link>
     </li>
-    <li class="px-4 text-gray-700" aria-current="page">Form Input Games</li>
+    <li className="px-4 text-gray-700" aria-current="page">Form Input Games</li>
   </ol>
 </nav>
           </div>
       <div className="pt-6 px-10 pb-4 bg-white w-auto sm:w-auto md:w-auto border-2 border-2 mt-6">
-      <form onSubmit={handleSubmit} class="space-y-4 text-gray-700">
-  <div class="flex flex-wrap">
-    <div class="w-full">
-      <label class="block mb-1">Game Name</label>
-      <input class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F05423] focus:border-[#F05423] block w-full p-2.5" 
+      <form onSubmit={handleSubmit} className="space-y-4 text-gray-700">
+  <div className="flex flex-wrap">
+    <div className="w-full">
+      <label className="block mb-1">Game Name</label>
+      <input className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#F05423] focus:border-[#F05423] block w-full p-2.5" 
        onChange={handleInput}
        value={input.name}
        name="name"
@@ -103,8 +103,8 @@ const CrudForm = () => {
       />
     </div>
   </div>
-  <div class="w-full">
-      <label class="block mb-1" for="formGridCode_last">Image URL</label>
+  <div className="w-full">
+      <label className="block mb-1" htmlFor="formGridCode_last">Image URL</label>
       <input onChange={handleInput}
               value={input.image_url}
               name="image_url"
@@ -114,8 +114,8 @@ const CrudForm = () => {
               required
       />
     </div>
-    <div class="w-full">
-      <label class="block mb-1">Description</label>
+    <div className="w-full">
+      <label className="block mb-1">Description</label>
       <textarea onChange={handleInput}
               value={input.description}
               name="description"
@@ -125,8 +125,8 @@ const CrudForm = () => {
       />
     </div>
 
-    <div class="w-full">
-      <label class="block mb-1">Category</label>
+    <div className="w-full">
+      <label className="block mb-1">Category</label>
       <Select
            options={categoryOptions}
             value={selectedCategory}
@@ -136,9 +136,9 @@ const CrudForm = () => {
             />
       </div>
 
-  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
-    <div class="w-full px-2 md:w-1/3">
-      <label class="block mb-1">Release Year</label>
+  <div className="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div className="w-full px-2 md:w-1/3">
+      <label className="block mb-1">Release Year</label>
       <input 
        onChange={handleInput}
        value={input.release_year}
@@ -152,8 +152,8 @@ const CrudForm = () => {
       />
     </div>
 
-    <div class="w-full px-2 md:w-1/3">
-      <label class="block mb-1">Size (MB)</label>
+    <div className="w-full px-2 md:w-1/3">
+      <label className="block mb-1">Size (MB)</label>
       <input 
        onChange={handleInput}
        value={input.size}
@@ -165,8 +165,8 @@ const CrudForm = () => {
       />
     </div>
 
-    <div class="w-full px-2 md:w-1/3">
-      <label class="block mb-1">Price</label>
+    <div className="w-full px-2 md:w-1/3">
+      <label className="block mb-1">Price</label>
       <input 
       onChange={handleInput}
       value={input.price}
@@ -179,9 +179,9 @@ const CrudForm = () => {
     </div>
   </div>
 
-  <div class="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
-    <div class="w-full px-2 md:w-1/2">
-      <label class="block mb-1">Rating (0-5)</label>
+  <div className="flex flex-wrap -mx-2 space-y-4 md:space-y-0">
+    <div className="w-full px-2 md:w-1/2">
+      <label className="block mb-1">Rating (0-5)</label>
       <input 
       onChange={handleInput}
       value={input.rating}
@@ -194,8 +194,8 @@ const CrudForm = () => {
       required
       />
     </div>
-    <div class="w-full px-2 md:w-1/2">
-      <label class="block mb-1">Platform</label>
+    <div className="w-full px-2 md:w-1/2">
+      <label className="block mb-1">Platform</label>
       <input 
        onChange={handleInput}
        value={input.platform}

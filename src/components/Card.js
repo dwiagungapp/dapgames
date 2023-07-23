@@ -79,19 +79,19 @@ const Card = () => {
     )
     .map((app, index) => (
         
-        <div key={app.id} className="flex justify-start w-full h-40 border border-[#FF8F00] md:flex-row bg-white shadow-xl md:max-w-xl hover:shadow-2xl transition duration-300">
-      <div className="flex items-center justify-center px-4">
+        <div key={app.id} className="rounded-lg flex justify-start w-full h-full md:h-40 md:flex-row bg-white shadow-xl md:max-w-xl hover:shadow-2xl transition duration-300">
+      <div className="flex items-center justify-center p-4">
         <img
-          className="h-30 w-full object-fill rounded-lg"
+          className="object-fill rounded-lg"
           src={app.image_url}
           alt={app.name}
         />
       </div>
           
-          <div className="bg-white w-full p-4 flex flex-col justify-between md:justify-between">
+          <div className="rounded-lg bg-white w-full p-4 flex flex-col justify-between md:justify-between">
             <div className="mb-0">
-              <div className="text-gray-900 font-bold text-xl mb-1">{app.name}</div>
-              <div className="text-gray-500 text-s mb-2">{app.category}</div>
+              <div className="text-gray-900 font-bold text-lg mb-1">{app.name}</div>
+              <div className="text-gray-500 text-sm mb-2">{app.category}</div>
             </div>
     <div className="flex">
               <div className="flex">

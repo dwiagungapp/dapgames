@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
+import logodg from "../assets/img/logodg.png"
 
 const Navbar = () => {
     const location = useLocation();
@@ -8,11 +9,12 @@ const Navbar = () => {
     const activeLink = "text-[#F05423] font-bold";
 
     return (
-        <nav className="w-full bg-gray-900 shadow sticky top-0 z-10 font-poppins">
-            <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+      <>
+        <nav className="w-full bg-[#2F323E] shadow sticky top-0 z-10 font-poppins">
+            <div className="justify-between px-4 mx-auto md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                    <p className="text-white font-bold">DAP Games</p>
+                    <img src={logodg} className="w-18 h-8"/>
                         <div className="md:hidden">
                             <button
                                 className="p-2 text-white rounded-md outline-none focus:border-[#F05423] focus:border"
@@ -116,6 +118,7 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
+        </>
     );
 }
 

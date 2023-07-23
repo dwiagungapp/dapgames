@@ -29,7 +29,7 @@ const LayoutDashboard = (props) => {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col bg-[#edf1f5] min-h-screen">
       <TopBar showNav={showNav} setShowNav={setShowNav} />
       <Transition
         as={Fragment}
@@ -44,15 +44,15 @@ const LayoutDashboard = (props) => {
         <SideBar showNav={showNav} />
       </Transition>
       <main
-        className={`pt-16 transition-all duration-[400ms] ${
+        className={`flex-grow pt-16 transition-all duration-[400ms] ${
           showNav && !isMobile ? "pl-56" : ""
         }`}
       >
-        <div className="px-4 md:px-16 bg-[#edf1f5]">{props.children}</div>
-        <Footer/>
+        <div className="px-4 md:px-16">{props.children}</div>
       </main>
-    </>
+      <Footer />
+    </div>
   );
-}
+};
 
-export default LayoutDashboard
+export default LayoutDashboard;
