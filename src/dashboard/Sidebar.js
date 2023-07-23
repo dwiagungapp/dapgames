@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { HomeIcon, TableCellsIcon, BriefcaseIcon, UserIcon, RectangleGroupIcon } from "@heroicons/react/24/solid";
+import { HomeIcon, TableCellsIcon, UserIcon, RectangleGroupIcon } from "@heroicons/react/24/solid";
 import logodg from "../assets/img/logodg.png"
 
 const SideBar = forwardRef(({ showNav }, ref) => {

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
 import axios from 'axios';
+import { MagnifyingGlassIcon, TableCellsIcon, UserIcon, RectangleGroupIcon } from "@heroicons/react/24/solid";
 import { motion } from 'framer-motion';
 
 const Card = () => {
@@ -29,6 +30,12 @@ const Card = () => {
     setSelectedCategory(category);
   };
 
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
   const {
     renderStars,
   } = handleFunctions;
@@ -49,8 +56,25 @@ const Card = () => {
     }
   }, [fetchStatus, setFetchStatus, setData]);
 
+
   return (
     <>
+    {/* Search input */}
+    {/* Search input and button */}
+    <div className="flex items-center justify-center mb-6">
+        <div className="relative flex items-center">
+          <input
+            type="text"
+            placeholder="Search Games..."
+            value={searchQuery}
+            onChange={handleSearch}
+            className="px-4 py-4 border rounded-lg border-gray-300 focus:outline-none focus:ring-primary focus:border-primary w-full pr-12"
+          />
+          {/* Search icon */}
+          <MagnifyingGlassIcon className="w-6 h-6 absolute right-4 text-gray-400" />
+        </div>
+        </div>
+      
     {/* Filter buttons */}
     <div className="flex flex-wrap mb-4 font-poppins">
     {categoryOptions.map((option) => (
@@ -69,15 +93,17 @@ const Card = () => {
       </div>
 
      <div className="font-poppins grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5">
-      {data !== null &&
-  data
-    .filter(
-      (app) =>
-        selectedCategory === null ||
-        selectedCategory === 'All' || // Tambahkan kondisi ini
-        app.category === selectedCategory
-    )
-    .map((app, index) => (
+     {data !== null &&
+          data
+            .filter(
+              (app) =>
+                (selectedCategory === null ||
+                  selectedCategory === 'All' ||
+                  app.category === selectedCategory) &&
+                (searchQuery.trim() === '' ||
+                  app.name.toLowerCase().includes(searchQuery.toLowerCase()))
+            )
+            .map((app, index) => (
         
         <div key={app.id} className="rounded-lg flex justify-start w-full h-full md:h-40 md:flex-row bg-white shadow-xl md:max-w-xl hover:shadow-2xl transition duration-300">
       <div className="flex items-center justify-center p-4">
